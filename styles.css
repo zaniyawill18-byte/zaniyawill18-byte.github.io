@@ -64,6 +64,9 @@ body:after{display:none}
 }
 
 /* What the Sound Leaves Behind: refined editorial pacing */
+.sound-project,
+.sound-project:after{background-image:none!important}
+.sound-project .project-hero:before{display:none}
 .sound-project .project-hero{
   min-height:calc(94svh - 76px);
   padding-top:11vh;
