@@ -106,7 +106,13 @@ body:after{display:none}
   background:#111;
 }
 .sound-project .media-frame:after{display:none}
-.sound-project .media-label{left:20px;bottom:18px;color:var(--muted)}
+.sound-project .media-label{
+  inset:0;
+  display:grid;
+  place-items:center;
+  color:var(--muted);
+  text-align:center;
+}
 .sound-project .sequence{
   width:min(1120px,88vw);
   margin:0 auto;
@@ -117,6 +123,7 @@ body:after{display:none}
   min-height:0;
   padding:16px 0 0;
   border:0;
+  text-align:center;
 }
 .sound-project .artwork-frame.has-artwork{
   display:grid;
