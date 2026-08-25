@@ -33,3 +33,14 @@
   .contact-link{font-size:clamp(16px,5.4vw,24px)}
   .footer{min-height:52px}
 }
+
+/* Finished media for What the Sound Leaves Behind */
+.media-frame.has-video{aspect-ratio:16/9;max-height:none;background:#050505}
+.media-frame.has-video:after{display:none}
+.media-frame.has-video video{display:block;width:100%;height:100%;object-fit:contain;background:#050505}
+.artwork-frame.has-artwork{display:block;min-height:0;background:#050505}
+.artwork-frame.has-artwork img{display:block;width:100%;height:auto}
+
+@media(max-width:820px){
+  .media-frame.has-video{aspect-ratio:1/1;max-height:none}
+}
