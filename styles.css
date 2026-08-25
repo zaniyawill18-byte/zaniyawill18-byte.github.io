@@ -66,6 +66,15 @@ body:after{display:none}
 /* What the Sound Leaves Behind: refined editorial pacing */
 .sound-project,
 .sound-project:after{background-image:none!important}
+.sound-project,
+.sound-project main,
+.sound-project .project-hero,
+.sound-project .overview,
+.sound-project .media-section,
+.sound-project .artwork,
+.sound-project .artwork-frame.has-artwork,
+.sound-project .next-project,
+.sound-project .footer{background-color:#00040c}
 .sound-project .project-hero:before{display:none}
 .sound-project .project-hero{
   min-height:calc(94svh - 76px);
@@ -142,6 +151,7 @@ body:after{display:none}
   padding:18px var(--pad);
   color:var(--muted);
   border:0;
+  text-align:center;
 }
 .sound-project .next-project{
   grid-template-columns:1fr 3fr;
