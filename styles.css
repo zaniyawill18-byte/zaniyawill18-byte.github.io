@@ -74,7 +74,7 @@ body:after{display:none}
 .sound-project .artwork,
 .sound-project .artwork-frame.has-artwork,
 .sound-project .next-project,
-.sound-project .footer{background-color:#00040c}
+.sound-project .footer{background-color:var(--bg)}
 .sound-project .project-hero:before{display:none}
 .sound-project .project-hero{
   min-height:calc(94svh - 76px);
