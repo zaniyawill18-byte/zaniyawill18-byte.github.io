@@ -62,6 +62,9 @@ body:after{display:none}
 .featured-project .project-layout{grid-template-columns:3fr 2fr;min-height:0}
 .featured-project .project-visual{min-height:0;aspect-ratio:1147/1013}
 .featured-project .project-feature-image{inset:0;width:100%;height:100%}
+.featured-project .project-feature-image{filter:grayscale(1) brightness(.68);transition:filter .55s cubic-bezier(.2,.8,.2,1)}
+.featured-project .project-visual:hover .project-feature-image,
+.featured-project .project-visual:focus-visible .project-feature-image{filter:grayscale(0) brightness(1)}
 .featured-project .project-copy{padding-top:10vh}
 .featured-project .project-copy h3{font-size:clamp(40px,4.4vw,68px)}
 
@@ -76,6 +79,10 @@ body:after{display:none}
   .featured-project .project-copy{order:3;min-height:420px;padding:54px 20px 20px}
   .featured-project .project-copy h3{font-size:clamp(46px,12.5vw,58px)}
   .featured-project .tag{left:18px;bottom:18px}
+}
+
+@media(hover:none){
+  .featured-project .project-feature-image{filter:none}
 }
 
 /* What the Sound Leaves Behind: refined editorial pacing */
