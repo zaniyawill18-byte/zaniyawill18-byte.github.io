@@ -148,7 +148,8 @@ body:after{display:none}
 }
 .sound-project .overview>.index-band,
 .sound-project .problem-section>.index-band,
-.sound-project .experience-section>.index-band{
+.sound-project .experience-section>.index-band,
+.sound-project .journey-section>.index-band{
   padding:0 var(--pad);
   border:0;
 }
@@ -159,7 +160,7 @@ body:after{display:none}
   font:inherit;
   letter-spacing:.06em;
 }
-.problem-section,.experience-section{background:var(--bg)}
+.problem-section,.experience-section,.journey-section{background:var(--bg)}
 .problem-grid{
   display:grid;
   grid-template-columns:1.15fr 1fr;
@@ -183,6 +184,49 @@ body:after{display:none}
 .problem-copy ul{margin-top:28px;list-style:disc;padding-left:1.1em}
 .problem-copy li+li{margin-top:14px}
 .problem-copy p+p{margin-top:28px}
+.journey-content{padding:clamp(64px,7vw,104px) var(--pad)}
+.journey-content>h2{
+  max-width:17ch;
+  font-size:clamp(40px,4.8vw,74px);
+  font-weight:400;
+  line-height:.94;
+  letter-spacing:-.05em;
+}
+.journey-steps{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:0;
+  margin-top:clamp(64px,7vw,100px);
+  list-style:none;
+}
+.journey-steps li{
+  position:relative;
+  min-width:0;
+  padding-right:clamp(18px,2.4vw,42px);
+}
+.journey-steps li:not(:last-child):after{
+  content:"→";
+  position:absolute;
+  top:31px;
+  right:clamp(5px,.8vw,14px);
+  color:var(--muted);
+  font-size:18px;
+  font-weight:400;
+}
+.journey-steps span{
+  display:block;
+  margin-bottom:28px;
+  color:var(--muted);
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.08em;
+}
+.journey-steps strong{
+  display:block;
+  max-width:15ch;
+  font-size:clamp(13px,1vw,16px);
+  line-height:1.25;
+}
 .sound-project .artwork .index-band{padding:0 var(--pad);border:0}
 .sound-project .media-frame{
   width:min(720px,78vw);
@@ -276,7 +320,8 @@ body:after{display:none}
   }
   .sound-project .overview>.index-band,
   .sound-project .problem-section>.index-band,
-  .sound-project .experience-section>.index-band{padding:0 12px}
+  .sound-project .experience-section>.index-band,
+  .sound-project .journey-section>.index-band{padding:0 12px}
   .problem-grid{grid-template-columns:1fr}
   .problem-grid>h2{
     padding:64px 18px 24px;
@@ -286,6 +331,17 @@ body:after{display:none}
     max-width:none;
     padding:24px 18px 64px;
   }
+  .journey-content{padding:56px 18px 64px}
+  .journey-content>h2{font-size:clamp(42px,12vw,62px)}
+  .journey-steps{
+    grid-template-columns:1fr 1fr;
+    gap:38px 24px;
+    margin-top:56px;
+  }
+  .journey-steps li{padding:0}
+  .journey-steps li:not(:last-child):after{display:none}
+  .journey-steps span{margin-bottom:12px}
+  .journey-steps strong{font-size:15px}
   .sound-project .media-section{padding:0 18px 64px}
   .sound-project .media-frame{width:100%;margin-top:10px}
   .sound-project .sequence{width:100%;grid-template-columns:1fr 1fr;gap:10px 18px}
