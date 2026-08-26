@@ -147,7 +147,8 @@ body:after{display:none}
   border:0;
 }
 .sound-project .overview>.index-band,
-.sound-project .problem-section>.index-band{
+.sound-project .problem-section>.index-band,
+.sound-project .experience-section>.index-band{
   padding:0 var(--pad);
   border:0;
 }
@@ -158,7 +159,7 @@ body:after{display:none}
   font:inherit;
   letter-spacing:.06em;
 }
-.problem-section{background:var(--bg)}
+.problem-section,.experience-section{background:var(--bg)}
 .problem-grid{
   display:grid;
   grid-template-columns:1.15fr 1fr;
@@ -181,6 +182,7 @@ body:after{display:none}
 }
 .problem-copy ul{margin-top:28px;list-style:disc;padding-left:1.1em}
 .problem-copy li+li{margin-top:14px}
+.problem-copy p+p{margin-top:28px}
 .sound-project .artwork .index-band{padding:0 var(--pad);border:0}
 .sound-project .media-frame{
   width:min(720px,78vw);
@@ -273,7 +275,8 @@ body:after{display:none}
     padding:56px 18px 64px;
   }
   .sound-project .overview>.index-band,
-  .sound-project .problem-section>.index-band{padding:0 12px}
+  .sound-project .problem-section>.index-band,
+  .sound-project .experience-section>.index-band{padding:0 12px}
   .problem-grid{grid-template-columns:1fr}
   .problem-grid>h2{
     padding:64px 18px 24px;
