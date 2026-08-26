@@ -23,6 +23,15 @@
   <main>
     <section class="home-hero shell" aria-labelledby="hero-title">
       <div class="ambient-light" aria-hidden="true"></div>
+      <div class="scroll-cursor" aria-hidden="true">
+        <svg viewBox="0 0 120 120" role="presentation">
+          <defs><path id="scroll-ring" d="M60,60 m-43,0 a43,43 0 1,1 86,0 a43,43 0 1,1 -86,0"></path></defs>
+          <g class="scroll-cursor-ring">
+            <text><textPath href="#scroll-ring" textLength="270" lengthAdjust="spacing">SCROLL DOWN • SCROLL DOWN •</textPath></text>
+          </g>
+          <path class="scroll-cursor-arrow" d="M60 37v42M47 66l13 13 13-13"></path>
+        </svg>
+      </div>
       <h1 id="hero-title"><span>Spaces</span><span>that feel</span><span>alive</span></h1>
       <a class="explore-link" href="#work">Explore work ↓</a>
     </section>
