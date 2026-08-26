@@ -68,10 +68,14 @@ body:after{display:none}
 @media(max-width:820px){
   .project-side{grid-template-rows:56px 1fr}
   .project-side .project-band{min-height:56px}
-  .featured-project .project-layout{min-height:0}
-  .featured-project .project-visual{min-height:0;aspect-ratio:1147/1013}
+  .featured-project .project-layout{display:flex;flex-direction:column;min-height:0}
+  .featured-project .project-side{display:contents}
+  .featured-project .project-band{order:1}
+  .featured-project .project-visual{order:2;min-height:0;aspect-ratio:1147/1013}
   .featured-project .project-feature-image{inset:0;width:100%;height:100%}
-  .featured-project .project-copy{min-height:56vh;padding-top:8vh}
+  .featured-project .project-copy{order:3;min-height:420px;padding:54px 20px 20px}
+  .featured-project .project-copy h3{font-size:clamp(46px,12.5vw,58px)}
+  .featured-project .tag{left:18px;bottom:18px}
 }
 
 /* What the Sound Leaves Behind: refined editorial pacing */
