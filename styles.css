@@ -149,9 +149,14 @@ body:after{display:none}
   max-width:min(980px,74vw);
   max-height:76vh;
   object-fit:contain;
+  border:1px solid var(--fg);
 }
 .sound-project .artwork figcaption{
-  padding:18px var(--pad);
+  display:flex;
+  justify-content:center;
+  width:min(980px,74vw);
+  margin:0 auto;
+  padding:18px 0;
   color:var(--muted);
   border:0;
   text-align:center;
@@ -205,6 +210,7 @@ body:after{display:none}
     max-width:620px;
     max-height:none;
   }
+  .sound-project .artwork figcaption{width:100%;padding:16px 18px}
   .sound-project .next-project{grid-template-columns:1fr;min-height:0}
   .sound-project .next-project>a{min-height:180px;padding:48px 18px 20px}
 }
