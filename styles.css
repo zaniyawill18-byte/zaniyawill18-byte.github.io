@@ -121,6 +121,64 @@ body:after{display:none}
   padding-top:11vh;
   padding-bottom:6vh;
 }
+.beyond-project .project-hero{overflow:hidden}
+.beyond-project .project-title,
+.beyond-project .project-meta{position:relative;z-index:2}
+.credits-atmosphere{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  overflow:hidden;
+  pointer-events:none;
+}
+.credits-atmosphere:before{
+  content:"";
+  position:absolute;
+  inset:8% 4% 18%;
+  background:
+    radial-gradient(ellipse at 38% 42%,rgba(255,255,255,.055),transparent 34%),
+    radial-gradient(ellipse at 70% 34%,rgba(255,255,255,.035),transparent 29%);
+  opacity:.7;
+  animation:credits-haze 18s ease-in-out infinite alternate;
+}
+.credits-flare{
+  --drift-x:18px;
+  --drift-y:-12px;
+  --mid-x:7px;
+  --mid-y:-5px;
+  position:absolute;
+  width:clamp(170px,24vw,380px);
+  aspect-ratio:1;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.32) 0 1px,rgba(255,255,255,.13) 2px,rgba(255,255,255,.045) 13%,transparent 58%);
+  opacity:.09;
+  mix-blend-mode:screen;
+  animation:credits-flash 14s cubic-bezier(.22,.7,.2,1) infinite;
+}
+.credits-flare:before,
+.credits-flare:after{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.17),transparent);
+}
+.credits-flare:before{width:78%;height:1px}
+.credits-flare:after{width:1px;height:78%;background:linear-gradient(180deg,transparent,rgba(255,255,255,.13),transparent)}
+.flare-one{left:7%;top:17%;animation-delay:-2s}
+.flare-two{right:5%;top:7%;width:clamp(130px,19vw,300px);--drift-x:-22px;--drift-y:15px;--mid-x:-9px;--mid-y:6px;animation-duration:17s;animation-delay:-9s}
+.flare-three{left:39%;bottom:8%;width:clamp(120px,17vw,270px);--drift-x:14px;--drift-y:-20px;--mid-x:6px;--mid-y:-8px;animation-duration:19s;animation-delay:-13s}
+.flare-four{right:27%;top:39%;width:clamp(90px,13vw,210px);--drift-x:-12px;--drift-y:-10px;--mid-x:-5px;--mid-y:-4px;animation-duration:12s;animation-delay:-5s}
+@keyframes credits-flash{
+  0%,18%,100%{opacity:.055;transform:translate3d(0,0,0) scale(.78)}
+  21%{opacity:.18;transform:translate3d(0,0,0) scale(.9)}
+  23%{opacity:.52;transform:translate3d(var(--mid-x),var(--mid-y),0) scale(1.02)}
+  25%{opacity:.12;transform:translate3d(var(--mid-x),var(--mid-y),0) scale(.94)}
+  29%{opacity:.28;transform:translate3d(var(--mid-x),var(--mid-y),0) scale(1)}
+  38%,72%{opacity:.07;transform:translate3d(var(--drift-x),var(--drift-y),0) scale(.86)}
+}
+@keyframes credits-haze{to{opacity:1;transform:translate3d(1.5%,-1%,0) scale(1.04)}}
 .sound-project .project-title h1{max-width:15ch}
 .sound-project .premise{margin-top:4vh}
 .sound-project .project-meta{padding-top:8vh;padding-bottom:0}
@@ -598,6 +656,11 @@ body:after{display:none}
     padding-top:11vh;
     padding-bottom:30px;
   }
+  .credits-flare{opacity:.06;width:58vw}
+  .flare-one{left:-18%;top:19%}
+  .flare-two{right:-23%;top:8%}
+  .flare-three{left:31%;bottom:15%;width:45vw}
+  .flare-four{display:none}
   .sound-project .project-meta{padding-top:7vh}
   .sound-project .overview-grid{grid-template-columns:1fr;min-height:0}
   .sound-project .overview h2{
@@ -695,6 +758,12 @@ body:after{display:none}
   .sound-project .artwork figcaption{width:100%;padding:16px 18px}
   .sound-project .next-project{grid-template-columns:1fr;min-height:0}
   .sound-project .next-project>a{min-height:180px;padding:48px 18px 20px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .credits-atmosphere:before,
+  .credits-flare{animation:none}
+  .credits-flare{opacity:.1;transform:scale(.9)}
 }
 
 /* Compact homepage rhythm on phones */
