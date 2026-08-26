@@ -110,8 +110,8 @@ body:after{display:none}
 }
 .sound-project .artwork .index-band{padding:0 var(--pad);border:0}
 .sound-project .media-frame{
-  width:min(1120px,88vw);
-  aspect-ratio:16/9;
+  width:min(720px,78vw);
+  aspect-ratio:1;
   min-height:0;
   margin:18px auto 0;
   background:#111;
@@ -126,7 +126,7 @@ body:after{display:none}
   text-align:center;
 }
 .sound-project .sequence{
-  width:min(1120px,88vw);
+  width:min(720px,78vw);
   margin:0 auto;
   border:0;
   gap:18px;
