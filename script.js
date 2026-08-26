@@ -21,3 +21,14 @@ if (hero && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     hero.style.setProperty('--my', `${((event.clientY - bounds.top) / bounds.height) * 100}%`);
   });
 }
+
+const scrollCursor = document.querySelector('.scroll-cursor');
+const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
+if (hero && scrollCursor && finePointer.matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  hero.addEventListener('pointerenter', () => scrollCursor.classList.add('is-visible'));
+  hero.addEventListener('pointermove', (event) => {
+    scrollCursor.style.left = `${event.clientX}px`;
+    scrollCursor.style.top = `${event.clientY}px`;
+  });
+  hero.addEventListener('pointerleave', () => scrollCursor.classList.remove('is-visible'));
+}
