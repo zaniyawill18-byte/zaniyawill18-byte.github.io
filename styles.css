@@ -85,6 +85,31 @@ body:after{display:none}
   .featured-project .project-feature-image{filter:none}
 }
 
+/* Desktop scroll cursor */
+.scroll-cursor{display:none}
+@media(hover:hover) and (pointer:fine){
+  .scroll-cursor{
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:80;
+    display:block;
+    width:120px;
+    height:120px;
+    pointer-events:none;
+    opacity:0;
+    transform:translate3d(-50%,-50%,0) scale(.82);
+    transition:opacity .22s ease,transform .22s ease;
+    color:var(--fg);
+  }
+  .scroll-cursor.is-visible{opacity:1;transform:translate3d(-50%,-50%,0) scale(1)}
+  .scroll-cursor svg{display:block;width:100%;height:100%;overflow:visible}
+  .scroll-cursor text{fill:currentColor;font:700 7px var(--body);letter-spacing:1.2px;text-transform:uppercase}
+  .scroll-cursor-ring{transform-origin:60px 60px;animation:scroll-ring-spin 12s linear infinite}
+  .scroll-cursor-arrow{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:square;stroke-linejoin:miter}
+}
+@keyframes scroll-ring-spin{to{transform:rotate(360deg)}}
+
 /* What the Sound Leaves Behind: refined editorial pacing */
 .sound-project,
 .sound-project:after{background-image:none!important}
