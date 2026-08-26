@@ -146,6 +146,41 @@ body:after{display:none}
   padding-right:0;
   border:0;
 }
+.sound-project .overview>.index-band,
+.sound-project .problem-section>.index-band{
+  padding:0 var(--pad);
+  border:0;
+}
+.sound-project .overview>.index-band h2{
+  min-height:0;
+  padding:0;
+  border:0;
+  font:inherit;
+  letter-spacing:.06em;
+}
+.problem-section{background:var(--bg)}
+.problem-grid{
+  display:grid;
+  grid-template-columns:1.15fr 1fr;
+  min-height:0;
+}
+.problem-grid>h2{
+  padding:clamp(72px,8vw,118px) clamp(28px,6vw,96px);
+  font-size:clamp(48px,5.4vw,82px);
+  font-weight:400;
+  line-height:.92;
+  letter-spacing:-.055em;
+  text-transform:uppercase;
+}
+.problem-copy{
+  align-self:center;
+  max-width:52ch;
+  padding:clamp(72px,8vw,118px) clamp(32px,5vw,80px);
+  font-size:clamp(16px,1.2vw,19px);
+  line-height:1.55;
+}
+.problem-copy ul{margin-top:28px;list-style:disc;padding-left:1.1em}
+.problem-copy li+li{margin-top:14px}
 .sound-project .artwork .index-band{padding:0 var(--pad);border:0}
 .sound-project .media-frame{
   width:min(720px,78vw);
@@ -236,6 +271,17 @@ body:after{display:none}
     min-height:0;
     max-width:none;
     padding:56px 18px 64px;
+  }
+  .sound-project .overview>.index-band,
+  .sound-project .problem-section>.index-band{padding:0 12px}
+  .problem-grid{grid-template-columns:1fr}
+  .problem-grid>h2{
+    padding:64px 18px 24px;
+    font-size:clamp(46px,13vw,72px);
+  }
+  .problem-copy{
+    max-width:none;
+    padding:24px 18px 64px;
   }
   .sound-project .media-section{padding:0 18px 64px}
   .sound-project .media-frame{width:100%;margin-top:10px}
