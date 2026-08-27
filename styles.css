@@ -856,8 +856,6 @@ body:after{display:none}
 }
 .orbit-stage-image figcaption span{color:var(--blue);white-space:nowrap}
 .orbit-stage-image figcaption strong{max-width:32ch;text-align:right}
-.orbit-stage-image:first-child .orbit-stage-media,
-.orbit-stage-image:last-child .orbit-stage-media{aspect-ratio:4/5}
 .orbit-stage-image:last-child{grid-column:1/-1;justify-self:center;width:calc(50% - 22px)}
 .translation-source-credit{
   margin-top:24px;
