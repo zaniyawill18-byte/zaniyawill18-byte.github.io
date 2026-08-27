@@ -773,11 +773,6 @@ body:after{display:none}
 .particle-project .project-reflection{background:var(--bg)}
 .orbit-project .project-hero{min-height:0;padding-top:10vh;padding-bottom:5vh}
 .orbit-project .project-title h1{max-width:10ch}
-.orbit-hero-loop{
-  width:min(760px,100%);
-  aspect-ratio:1;
-  margin:clamp(54px,6vw,88px) auto 0;
-}
 .orbit-video-frame{overflow:hidden;background:#000}
 .orbit-video-frame video{display:block;width:100%;height:100%;object-fit:contain;background:#000}
 .orbit-project .project-meta{padding-top:clamp(52px,6vw,84px)}
@@ -1003,7 +998,6 @@ body:after{display:none}
   .final-frame-grid .evidence-placeholder:last-child{grid-column:auto;width:auto}
   .evidence-placeholder{padding:16px}
   .orbit-project .project-hero{padding-top:9vh}
-  .orbit-hero-loop{width:100%;margin-top:48px}
   .orbit-section>.index-band{padding:0 12px}
   .orbit-content{padding:56px 18px 76px}
   .orbit-lead{grid-template-columns:1fr;gap:30px}
