@@ -831,8 +831,40 @@ body:after{display:none}
   gap:clamp(24px,3vw,44px);
   margin-top:clamp(66px,7vw,104px);
 }
-.orbit-stage-gallery .evidence-placeholder{aspect-ratio:8/5}
-.orbit-stage-gallery .evidence-placeholder:last-child{grid-column:1/-1;justify-self:center;width:calc(50% - 22px)}
+.orbit-stage-image{min-width:0}
+.orbit-stage-media{
+  display:grid;
+  place-items:center;
+  aspect-ratio:4/3;
+  overflow:hidden;
+  background:#050505;
+}
+.orbit-stage-media img{display:block;width:100%;height:100%;object-fit:contain}
+.orbit-stage-image figcaption{
+  display:flex;
+  justify-content:space-between;
+  gap:24px;
+  padding-top:16px;
+}
+.orbit-stage-image figcaption span,
+.orbit-stage-image figcaption strong{
+  font-size:9px;
+  font-weight:700;
+  line-height:1.35;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.orbit-stage-image figcaption span{color:var(--blue);white-space:nowrap}
+.orbit-stage-image figcaption strong{max-width:32ch;text-align:right}
+.orbit-stage-image:first-child .orbit-stage-media,
+.orbit-stage-image:last-child .orbit-stage-media{aspect-ratio:4/5}
+.orbit-stage-image:last-child{grid-column:1/-1;justify-self:center;width:calc(50% - 22px)}
+.translation-source-credit{
+  margin-top:24px;
+  color:var(--muted);
+  font-size:10px;
+  line-height:1.5;
+}
 .orbit-build-steps{grid-template-columns:repeat(3,minmax(0,1fr))}
 .system-evidence{
   display:grid;
@@ -1008,7 +1040,8 @@ body:after{display:none}
   .source-comparison{padding:0 12px;margin-top:0}
   .source-credit{grid-template-columns:1fr;gap:12px;padding:20px 18px 68px}
   .orbit-stage-gallery{grid-template-columns:1fr;gap:20px;margin-top:58px}
-  .orbit-stage-gallery .evidence-placeholder:last-child{grid-column:auto;width:auto}
+  .orbit-stage-image:last-child{grid-column:auto;width:auto}
+  .orbit-stage-image figcaption{gap:16px;padding-top:12px}
   .orbit-build-steps{grid-template-columns:1fr}
   .system-evidence{grid-template-columns:1fr;gap:20px;margin-top:58px}
   .network-evidence,.operator-evidence{aspect-ratio:8/5}
