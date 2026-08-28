@@ -888,7 +888,11 @@ body:after{display:none}
   aspect-ratio:1;
   margin-top:clamp(62px,7vw,96px);
 }
-.orbit-project .final-copy{margin-top:clamp(66px,7vw,100px)}
+.orbit-project .final-copy{
+  max-width:52ch;
+  margin:clamp(44px,5vw,72px) auto 0;
+  text-align:center;
+}
 .reflection-copy p+ p{margin-top:28px}
 .orbit-project .reflection-copy p{max-width:43ch;font-size:clamp(20px,2vw,30px)}
 .orbit-project .reflection-copy p:last-child{color:var(--muted);font-size:clamp(17px,1.5vw,22px)}
