@@ -14,6 +14,8 @@
 .about-content .kicker{margin-bottom:clamp(28px,5vh,56px)}
 .about-content h2{max-width:11ch;font-size:clamp(50px,5.4vw,86px)}
 .about-copy{display:grid;grid-template-columns:minmax(0,1fr);align-content:end;gap:0;flex:1;padding-top:clamp(54px,9vh,110px)}
+.about-bio{display:grid;gap:22px;max-width:48ch}
+.about-bio p{font-size:16px;line-height:1.48}
 .about-links{display:grid;gap:22px;margin-top:clamp(38px,5vw,64px)}
 .about-email{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-bottom:10px;border-bottom:1px solid var(--fg);font-size:clamp(16px,1.7vw,25px)}
 .about-social{display:flex;flex-wrap:wrap;gap:24px}
@@ -69,7 +71,9 @@
 body:after{display:none}
 
 /* Homepage editorial grid direction */
-.site-nav>p{display:none}
+.site-nav>p{display:block}
+@media(max-width:820px){.site-nav>p{display:none}}
+.hero-context .hero-label{color:var(--fg);font-weight:700;white-space:nowrap}
 .ambient-light{
   overflow:hidden;
   background:
