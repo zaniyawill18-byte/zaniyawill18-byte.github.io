@@ -883,8 +883,6 @@ body:after{display:none}
 .system-media-figure figcaption strong{text-align:right}
 .system-sequence-wrap{margin-top:clamp(66px,7vw,104px)}
 .system-flow{grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(24px,3.5vw,52px);margin-top:30px}
-.motion-frame-grid,
-.treatment-grid{margin-top:clamp(66px,7vw,104px)}
 .final-output-section .final-video-placeholder{
   width:min(760px,100%);
   aspect-ratio:1;
@@ -1043,8 +1041,6 @@ body:after{display:none}
   .system-media-figure figcaption{gap:16px;padding-top:12px}
   .system-sequence-wrap{margin-top:58px}
   .system-flow{grid-template-columns:1fr;gap:26px;margin-top:28px}
-  .motion-frame-grid,
-  .treatment-grid{margin-top:58px}
   .orbit-project .reflection-copy p{font-size:22px}
   .orbit-project .reflection-copy p:last-child{font-size:18px}
   .sound-project .overview>.index-band,
