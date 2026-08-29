@@ -179,6 +179,11 @@ body:after{display:none}
   .sound-home-project .project-band{order:1}
   .sound-home-project .project-visual{order:2;min-height:0;aspect-ratio:8/5}
   .sound-home-project .project-copy{order:3;min-height:0;padding:54px 20px 20px}
+  .orbit-home-project .project-layout{display:flex;flex-direction:column;min-height:0}
+  .orbit-home-project .project-side{display:contents}
+  .orbit-home-project .project-band{order:1}
+  .orbit-home-project .project-visual{order:2;min-height:0;aspect-ratio:8/5}
+  .orbit-home-project .project-copy{order:3;min-height:0;padding:54px 20px 20px}
   .orbit-home-project .project-visual{min-height:0;aspect-ratio:8/5}
 }
 
