@@ -104,6 +104,25 @@
   }
 }
 
+/* Safari phone corrections for the two remaining homepage cards */
+@media(max-width:820px){
+  .featured-project .project-link{margin-top:52px}
+  .sound-home-project,
+  .sound-home-project .project-layout,
+  .sound-home-project .project-band,
+  .sound-home-project .project-visual,
+  .sound-home-project .project-copy{
+    width:100%!important;
+    max-width:none!important;
+  }
+  .sound-home-project .project-layout{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    grid-template-rows:56px auto auto!important;
+    grid-template-areas:"band" "visual" "copy"!important;
+  }
+}
+
 /* Finished artwork for What the Sound Leaves Behind */
 .artwork-frame.has-artwork{display:block;min-height:0;background:#050505}
 .artwork-frame.has-artwork img{display:block;width:100%;height:auto}
